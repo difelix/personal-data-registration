@@ -1,11 +1,8 @@
 package com.difelix.personaldataregistration.entity;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
-import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
-import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBDocument;
 import java.time.LocalDateTime;
-import java.util.List;
-import java.util.UUID;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -17,33 +14,26 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@DynamoDBTable(tableName = "person")
-public class Person {
+@DynamoDBDocument
+public class Contact {
 
+  @DynamoDBAttribute
+  private String label;
+
+  @DynamoDBAttribute
+  private Boolean principal;
+
+  @DynamoDBAttribute
+  private String ddd;
+
+  @DynamoDBAttribute
+  private String phoneNumber;
+
+  @DynamoDBAttribute
+  private Boolean whatsApp;
+
+  @DynamoDBAttribute
   @Builder.Default
-  @DynamoDBHashKey
-  private String id = UUID.randomUUID().toString();
-
-  @DynamoDBAttribute
-  private String name;
-
-  @DynamoDBAttribute
-  private String email;
-
-  @DynamoDBAttribute
-  private String cpf;
-
-  @DynamoDBAttribute
-  private String birthdate;
-
-  @DynamoDBAttribute
-  private List<Address> addresses;
-
-  @DynamoDBAttribute
-  private List<Contact> contacts;
-
-  @Builder.Default
-  @DynamoDBAttribute
   private String createdAt = LocalDateTime.now().toString();
 
   @DynamoDBAttribute

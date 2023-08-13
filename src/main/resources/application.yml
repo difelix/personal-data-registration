@@ -11,3 +11,5 @@ spring:
     dynamodb:
       entity2ddl:
         auto: create-only
+  messages:
+    basename: messages

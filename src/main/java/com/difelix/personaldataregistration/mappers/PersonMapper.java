@@ -6,7 +6,7 @@ import com.difelix.personaldataregistration.entity.Person;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
-@Mapper(uses = AddressMapper.class)
+@Mapper(uses = {AddressMapper.class, ContactMapper.class})
 public interface PersonMapper {
 
   PersonMapper INSTANCE = Mappers.getMapper(PersonMapper.class);
