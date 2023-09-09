@@ -1,0 +1,28 @@
+{
+  "name": "Bruce Wayne",
+  "email": "i.am.batman@email.com",
+  "cpf": "11562892894",
+  "birthdate": "28/03/1985",
+  "addresses": [
+    {
+      "label": "Principal",
+      "cep": "13854983",
+      "street": "Wayne mansion",
+      "number": 171,
+      "neighborhood": "Bat cave",
+      "city": "Gotham",
+      "state": "Gotham",
+      "complement": "",
+      "isPrincipal": true
+    }
+  ],
+  "contacts": [
+    {
+      "label": "Principal",
+      "principal": true,
+      "ddd": "11",
+      "phoneNumber": "9756438834",
+      "whatsApp": true
+    }
+  ]
+}
